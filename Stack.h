@@ -7,8 +7,13 @@ template<class T>
 class Stack {
 private:
 	T *stack;
-	int size;
+	int height;
+	int maxSize;
+	void resize();
 public:
+	Stack();
+	Stack(int s);
+	~Stack();
 	void push(T);
 	T pop();
 	T peek();
